@@ -402,7 +402,9 @@ open class LineChartRenderer: LineRadarRenderer
             {
                 guard let e1 = dataSet.entryForIndex(x == 0 ? 0 : (x - 1)) else { continue }
                 guard let e2 = dataSet.entryForIndex(x) else { continue }
-                
+                if e1.y == 0 || e2.y == 0 {
+                    continue
+                }
                 let startPoint =
                     CGPoint(
                         x: CGFloat(e1.x),
