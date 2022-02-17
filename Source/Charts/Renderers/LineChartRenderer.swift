@@ -798,9 +798,6 @@ open class LineChartRenderer: LineRadarRenderer
             let pt = trans.pixelForValues(x: x, y: y)
             
             high.setDraw(pt: pt)
-            
-            // draw the lines
-            drawHighlightLines(context: context, point: pt, set: set)
         }
         
         context.restoreGState()
